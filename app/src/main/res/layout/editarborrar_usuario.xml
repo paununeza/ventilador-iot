@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/bg_main">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Editar Perfil"
+        android:textSize="28sp"
+        android:textColor="@color/text_dark"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Usuario (Solo lectura) -->
+    <TextView
+        android:id="@+id/txtUsernameDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Usuario: ..."
+        android:textSize="18sp"
+        android:textColor="@color/text_dark"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Contraseña ACTUAL -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Contraseña Actual"
+        app:boxStrokeColor="@color/primary_color"
+        app:passwordToggleEnabled="true"
+        android:layout_marginBottom="16dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editOldPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/accent_soft"
+        android:layout_marginVertical="16dp"/>
+
+    <!-- NUEVA Contraseña -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nueva Contraseña (mín. 8)"
+        app:boxStrokeColor="@color/primary_color"
+        app:passwordToggleEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editNewPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Confirmar NUEVA Contraseña -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Confirmar Nueva Contraseña"
+        app:boxStrokeColor="@color/primary_color"
+        app:passwordToggleEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editNewPassConfirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Botón Guardar -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSaveProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Actualizar Contraseña"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/primary_color"
+        android:textColor="@color/text_dark"
+        android:paddingVertical="12dp"/>
+
+    <Button
+        android:id="@+id/btnDeleteAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Eliminar Cuenta"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#D32F2F"
+        android:layout_marginTop="24dp"
+        style="?attr/materialButtonOutlinedStyle"/>
+
+</LinearLayout>
